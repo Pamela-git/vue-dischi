@@ -11,33 +11,31 @@
     <div id="root">
       <header>
         <img src="img/logo.png" alt="">
-
       </header>
+      <!-- bonus mostrare solo i generi corrispondenti -->
+      <div class="selectgenre">
+        <select v-model="genere">
+          <option value="">Mostra tutti</option>
+          <option value="Pop" >Pop</option>
+          <option value="Rock" >Rock</option>
+          <option value="Metal" >Metal</option>
+          <option value="Jazz">Jazz</option>
+        </select>
+      </div>
+      <!-- fine bonus -->
       <div class="container">
-        <div class="item-container" v-for="disco in libreria">
+        <!-- v-show parte del bonus: mostra solo gli elementi con la proprietò genre che corrisponde al v-model"genere" -->
+        <div class="item-container" v-for="disco in libreria" v-show="disco.genre.includes(genere)">
             <img :src="disco.poster" alt="">
             <h3 class="style-title">{{disco.title}}</h3>
             <h4 class="style-text">{{disco.author}}</h4>
             <span class="style-text">{{disco.year}}</span>
         </div>
       </div>
-
-
-
-
-
-
-
-
-
     </div>
 
-
-
-
-
     <!-- javascript -->
-    <script type="text/javascript" src="js/script.js">
+    <script type="text/javascript" src="js/bonus.js">
     </script>
   </body>
 </html>

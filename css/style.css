@@ -6,6 +6,7 @@
 
 #root {
   background-color: rgb(30, 45, 59);
+  min-height: 100vh;
 }
 
 header {
@@ -22,7 +23,7 @@ header > img {
   justify-content: center;
   width: 60%;
   margin: 0 auto;
-  padding: 5% 0;
+  padding: 3% 0;
 }
 .item-container {
   width: 20%;
@@ -42,4 +43,9 @@ header > img {
 
 .style-text {
   color: rgb(107, 110, 113);
+}
+
+.selectgenre {
+  text-align: center;
+  padding: 10px 0;
 }
